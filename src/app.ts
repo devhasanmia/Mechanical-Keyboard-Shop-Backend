@@ -16,7 +16,7 @@ app.get("/", (req: Request, res: Response) => {
       name: "Md. Hasan Mia",
       email: "hasanmiadev@gmail.com",
       mobile: "+8801740398196",
-    }
+    },
   });
 });
 app.use("/api", router);
