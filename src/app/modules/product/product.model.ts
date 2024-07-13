@@ -1,7 +1,11 @@
-import { model, Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 import { TProduct } from "./product.interface";
 
 const productSchema = new Schema<TProduct>({
+  image: {
+    type: String,
+    required: true,
+  },
   name: {
     type: String,
     required: true,
@@ -13,24 +17,16 @@ const productSchema = new Schema<TProduct>({
   availableQuantity: {
     type: Number,
     required: true,
-    min: 0,
   },
   price: {
     type: Number,
     required: true,
-    min: 0,
   },
   rating: {
     type: Number,
-    min: 0,
-    max: 5,
     default: 0,
   },
   description: {
-    type: String,
-    required: true,
-  },
-  image: {
     type: String,
     required: true,
   },
